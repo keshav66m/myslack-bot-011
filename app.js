@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const http = require("http");
 const axios = require("axios");
 const { App } =
 require("@slack/bolt");
@@ -124,6 +125,15 @@ app.command('/mybot-about', async ({ ack, respond }) => {
 });
 
 (async () => {
-    await app.start()
+  await app.start();
+
+  const port = process.env.PORT || 3000;
+
+  http.createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("MyBot is online! 🤖");
+  }).listen(port, "0.0.0.0", () => {
+    console.log(`🌐 Web server running on port ${port}`);
     console.log("⚡️ Bolt app is running!");
+  });
 })();
