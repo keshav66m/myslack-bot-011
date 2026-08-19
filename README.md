@@ -1,14 +1,14 @@
 # 🤖 MyBot — Slack Assistant
 
-MyBot is a Slack bot built with Node.js and Slack Bolt. It provides useful commands directly inside Slack and uses the Weatherstack API to provide weather information.
+MyBot is a Slack bot which has been developed using Node.js and Slack Bolt and provides users with commands that they can use in Slack while at the same time obtaining weather data from the Weatherstack API.
 
 ## ✨ Features
 
-- `/mybot-help` — Shows all available commands
-- `/mybot-weather <city>` — Gets current weather information
-- `/mybot-status` — Shows bot status and uptime
-- `/mybot-about` — Shows information about MyBot
-- Responds when someone says `hello`
+- `/mybot-help` - Displays all commands
+- `/mybot-weather <city>` - Retrieves current weather information
+- `/mybot-status` - Displays bot status and uptime
+- `/mybot-about` - Displays information about MyBot
+- Reacts when anyone says "hello"
 
 ## 🛠️ Technologies Used
 
@@ -22,9 +22,9 @@ MyBot is a Slack bot built with Node.js and Slack Bolt. It provides useful comma
 
 ## 🌦️ Weather
 
-The `/mybot-weather` command uses the Weatherstack API.
+The command known as `/mybot-weather` makes use of the Weatherstack API.
 
 Example:
 
 ```text
-/mybot-weather Delhi
+/mybot-weather Delhi,India
